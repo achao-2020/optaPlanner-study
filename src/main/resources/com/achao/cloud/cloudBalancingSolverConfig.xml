@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+    <!-- Domain model configuration -->
+    <scanAnnotatedClasses/>
+    <!--解决方案对象-->
+    <solutionClass>com.achao.cloud.solution.CloudBalance</solutionClass>
+    <!--计划实体-->
+    <entityClass>com.achao.cloud.task.CloudProcess</entityClass>
+    <!-- Score configuration -->
+    <scoreDirectorFactory>
+        <!--计算分数的两种方式，简单类和droll规则引擎-->
+        <easyScoreCalculatorClass>com.achao.cloud.CloudBalancingEasyScoreCalculator</easyScoreCalculatorClass>
+        <!--<scoreDrl>org/optaplanner/examples/cloudbalancing/solver/cloudBalancingScoreRules.drl</scoreDrl>-->
+    </scoreDirectorFactory>
+
+    <!-- Optimization algorithms configuration -->
+    <termination>
+    <!--最少运行时间，即便已经求得最优解，也会运行到这个时间才结束-->
+        <secondsSpentLimit>1</secondsSpentLimit>
+    <!--如果配置的是这个，则求得最优解后返回，这个demo的排列组合为8次，会尝试所有的排列组合-->
+<!--        <bestScoreFeasible>true</bestScoreFeasible>-->
+    </termination>
+</solver>
