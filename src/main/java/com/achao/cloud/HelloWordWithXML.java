@@ -7,10 +7,11 @@ import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 
 /**
+ * 通过xml配置
  * @author licc3
  * @date 2023-6-1 10:35
  */
-public class CloudComputerHelloWord {
+public class HelloWordWithXML {
 
     public static void main(String[] args) {
         // 加载规划模型配置
